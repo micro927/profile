@@ -1,7 +1,10 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppin = Poppins({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export const metadata = {
   title: "Micro | micro927 Github's Page",
@@ -15,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={poppin.className}>{children}</body>
     </html>
   );
 }
