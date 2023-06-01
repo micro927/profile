@@ -20,7 +20,7 @@ export default function Clock() {
 
   return (
     <div className="w-full flex flex-col items-center">
-      <p>Hello, Good {timeSide}</p>
+      <p>Good {timeSide}</p>
       <p> {clock?.toLocaleTimeString() ?? "Loading time..."}</p>
     </div>
   );
