@@ -7,7 +7,7 @@ const basePath = isProd ? `/${repo}` : undefined;
 
 const nextConfig = {
   reactStrictMode: true,
-  output: "standalone",
+  output: "export",
   assetPrefix: assetPrefix,
   basePath: basePath,
 };
