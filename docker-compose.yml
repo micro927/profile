@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  profiles-services-01:
+    container_name: profiles-container-01
+    build: .
+    ports:
+      - "8089:80"
