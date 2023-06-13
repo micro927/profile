@@ -16,7 +16,7 @@ export default function Clock() {
       clock?.toLocaleString([], { hour: "numeric", hour12: false }) ?? ""
     );
     setTimeSide(hourIn24Format < 12 ? "Morning" : "Afternoon");
-  }, [clock?.getHours()]);
+  }, [clock]);
 
   return (
     <div className="w-full flex flex-col items-center">
