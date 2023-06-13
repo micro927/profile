@@ -1,5 +1,5 @@
-async function getUser() {
-    const res = await fetch("http://localhost:7878");
+async function getUser(userId: number) {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/todos/${userId}`);
     // The return value is *not* serialized
     // You can return Date, Map, Set, etc.
 
