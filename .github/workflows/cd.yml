@@ -38,7 +38,7 @@ jobs:
       - name: create env file
         run: |
           touch .env
-          echo PROJECT_ENV_TITLE=${{ vars.PROJECT_ENV_TITLE }} >> .env
+          echo PROJECT_ENV_TITLE=${{ vars.NEXT_PUBLIC_PROJECT_ENV_TITLE }} >> .env
 
       - name: Build and export with Next.js
         run: pnpm run build
