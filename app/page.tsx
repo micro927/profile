@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Clock from "./components/Clock";
+import Example from "./components/Example";
+import Environment from "./components/Environment";
 
 export default function Home() {
   return (
@@ -11,12 +13,11 @@ export default function Home() {
         <Clock />
       </div>
       <div className="text-center">
-        <p className="text-xs text-zinc-700">
-          this website running on {process.env.PROJECT_ENV_TITLE}
-        </p>
+        <Environment />
         <p className="text-xs text-zinc-700">
           <Link href={"blog/15"}>Click here to see blog #15</Link>
         </p>
+        <Example />
       </div>
     </main>
   );

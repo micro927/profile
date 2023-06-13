@@ -1,6 +1,12 @@
 import { NextPage } from "next";
 
-const Post: NextPage<any> = ({ params }) => {
+type Props = {
+  params: {
+    post?: string;
+  };
+};
+
+const Post: NextPage<Props> = ({ params }) => {
   return (
     <>
       <p>This is Post number {params.post}</p>
