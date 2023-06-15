@@ -18,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppin.className}>{children}</body>
+      <body className={poppin.className}>
+        <header>This is root layout header</header>
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,15 +1,19 @@
 "use client";
 
+import Link from "next/link";
 import useSWRFetcher from "../utils/useSWRFetcher";
-const API_ENDPOINT = "http://localhost:7878/random";
+const API_ENDPOINT = "https://jsonplaceholder.typicode.com/todos/3";
 
-type RandomRes = {
-  num: number;
-  datetime: string;
+type RandomResult = {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
 };
 
 function Blog() {
-  const { data, isError, isLoading } = useSWRFetcher<RandomRes>(API_ENDPOINT);
+  const { data, isError, isLoading } =
+    useSWRFetcher<RandomResult>(API_ENDPOINT);
 
   if (isError) return <div>failed to load</div>;
   if (isLoading) return <div>loading...</div>;
@@ -17,10 +21,10 @@ function Blog() {
   return (
     <>
       <p>BLOG</p>
-      <div>{data?.datetime}</div>
+      <Link href={"/show"}>to .. show</Link>
       <div>
         {data &&
-          Array.from(Array(data.num), (e, i) => {
+          Array.from(Array(data.userId), (e, i) => {
             return <p key={i}>{i} - Lorem ipsums</p>;
           })}
       </div>

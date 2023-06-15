@@ -1,7 +1,7 @@
 function NotFound() {
   return (
     <div>
-      <p>404</p>
+      <p>not found (from root)</p>
     </div>
   );
 }
